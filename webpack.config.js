@@ -57,7 +57,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Three',
             filename: 'build/d3.html',
-            template: './ellipse.html',
+            template: './svg/polyline.html',
             inject: 'body',
             hash: true,
             chunks: ['index']
