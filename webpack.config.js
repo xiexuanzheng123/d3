@@ -24,7 +24,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.less$/,
+                test: /\.css$/,
                 use: [
                     'style-loader',
                     'css-loader'
@@ -35,7 +35,18 @@ module.exports = {
                 use: [
                     'url-loader?limit=10000&name=img/[hash:8].[name].[ext]'
                 ]
-            }
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg|ico)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[name].[ext]'
+                        }
+                    }
+                ]
+            },
         ]
     },
     resolve: {
@@ -46,7 +57,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Three',
             filename: 'build/d3.html',
-            template: './index.html',
+            template: './ellipse.html',
             inject: 'body',
             hash: true,
             chunks: ['index']
