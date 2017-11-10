@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <svg width="300" height="300">
+        <defs>
+            <filter id="Gaussian_Blur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+            </filter>
+        </defs>
+        <ellipse cx="200" cy="150" rx="70" ry="40" 
+                style="fill:#ff0000; stroke: #000;stroke-width:2; filter: url(#Gaussian_Blur)"  />
+    </svg>
+    <svg>
+        <defs>
+            <filter id="Gaussian_Blur1">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20" />
+            </filter>
+        </defs>
+        <ellipse cx="200" cy="150" rx="70" ry="40" 
+                style="fill: #ff0000; stroke: #000; stroke-width: 2; filter: url(#Gaussian_Blur1)"
+        />
+    </svg>
+</body>
+</html>
