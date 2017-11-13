@@ -9,7 +9,7 @@ module.exports = {
     entry: {
         index: [
             'babel-polyfill',
-            './src/index'
+            './src/d3/demos.js'
         ]
     },
     output: {
@@ -57,7 +57,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Three',
             filename: 'build/d3.html',
-            template: './svg/polyline.html',
+            template: './index.html',
             inject: 'body',
             hash: true,
             chunks: ['index']
