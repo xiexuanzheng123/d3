@@ -9,7 +9,7 @@ module.exports = {
     entry: {
         index: [
             'babel-polyfill',
-            './src/d3/demos.js'
+            './src/offical/array.js'
         ]
     },
     output: {
