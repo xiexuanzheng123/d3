@@ -54,6 +54,15 @@ var bisectDate = d3.bisector(function (d) { return d.date }).right;
 
 /**
  *transformations
- 1-1 cross
+ 1-1 cross笛卡尔乘积
+ 1-2 pairs
+ 1-3 ticks刻度序列
+ 1-4 range
  */
 console.log(d3.cross([1, 2], ['x', 'y']));//[[1, 'x'], [1, 'y'], [2, 'x'], [2, 'y']]
+console.log(d3.pairs([1, 2, 3, 4]));//[[1,2], [2, 3], [3, 4]]
+
+/**
+ * Histograms
+ * 1-1 histogram
+ */
