@@ -36,8 +36,24 @@ console.log(d3.deviation(a));
 /**
  * Search方法
  * 1-1 scan返回索引
+ * 1-2 bisectLeft
+ * 1-3 bisect
+ * 1-4 bisectRight
  */
 var array = [{foo: 42}, {foo: 91}];
 console.log(d3.scan(array, function (a, b) {
     return a.foo - b.foo;
 }));
+var data = [
+    {date: new Date(2011, 1, 1), value: 0.5},
+    {date: new Date(2011, 2, 1), value: 0.6},
+    {date: new Date(2011, 3, 1), value: 0.7},
+    {date: new Date(2011, 4, 1), value: 0.8}
+];
+var bisectDate = d3.bisector(function (d) { return d.date }).right;
+
+/**
+ *transformations
+ 1-1 cross
+ */
+console.log(d3.cross([1, 2], ['x', 'y']));//[[1, 'x'], [1, 'y'], [2, 'x'], [2, 'y']]
