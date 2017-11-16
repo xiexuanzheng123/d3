@@ -32,7 +32,7 @@ console.log(simulation.nodes);
  * (alphaTarget - alpha) * alphaDecay(alpha衰减系数)来调整仿真当前的alpha值
  */
 /**
- * 5 nodes
+ * 5 simulation.nodes([nodes])
  * 如果指定了nodes，则根据当前的nodes对象数组初始化仿真的节点初始位置和速度
  * 每个节点为一个对象类型，仿真器添加如下几个属性
  * 5-1 index
