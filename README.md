@@ -1,2 +1,2 @@
 # d3
-study the Three.js library
+study the D3.js library
